@@ -9,6 +9,9 @@ public class FindHoroscope {
 		findHoroscope();
 		
 	}
+	/*
+	 * This used for fbsdjkhsdbsdsd
+	 * */
 	public static void findHoroscope() {
 		String horoscope="";
 		boolean check= true;
