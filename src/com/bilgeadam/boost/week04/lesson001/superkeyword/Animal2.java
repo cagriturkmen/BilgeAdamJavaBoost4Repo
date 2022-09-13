@@ -4,7 +4,7 @@ public class Animal2 {
 	
 	void eat() {
 		System.out.println("eating...");
-		System.out.println("some git push try2");
+		System.out.println("some git push try3");
 		
 	}
 	
