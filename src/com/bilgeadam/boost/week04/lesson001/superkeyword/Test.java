@@ -10,10 +10,8 @@ public class Test {
 		Dog2 dog2 = new Dog2();
 	//	dog2.runner();
 		
-		Animal3 animal = new Animal3();
-		//Dog3 dog3 = new Dog3();
-		
-		
+	//	Animal3 animal = new Animal3();
+		Dog3 dog3 = new Dog3("somestring");
+			
 	}
-
 }
