@@ -10,10 +10,7 @@ public class Test {
 		Student stu = new Student();
 		stu.name="burak";
 		stu.rollNo=100;
-		System.out.println(stu);
-		
-	//	System.out.println(student);
-		
+		System.out.println(stu);	
+	//	System.out.println(student);		
 	}
-
 }
