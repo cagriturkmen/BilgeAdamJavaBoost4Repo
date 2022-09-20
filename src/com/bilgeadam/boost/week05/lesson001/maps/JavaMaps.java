@@ -14,7 +14,7 @@ public class JavaMaps {
 		Map<String, Integer> numbers = new HashMap<>();
 		numbers.put("One", 1);
 		numbers.put("Two", 2);
-		numbers.put("Nine", 15);
+		numbers.put("Nine", 9);
 		
 		System.out.println(numbers);
 		
