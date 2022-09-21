@@ -72,12 +72,13 @@ public class SomeOtherStreamFeatures {
 		System.out.println(match);
 		
 		//allMatch
-		boolean match2 = list.stream().allMatch(number -> number<0 && number<105);
-		System.out.println(match2);
+		boolean match2 = list.stream().allMatch(number -> number>5);
+		System.out.println("Allmatch: "+match2);
 		
 		//noneMatch
 		boolean match3 =list.stream().noneMatch(number -> number<2);
 		System.out.println(match3);
+		
 		
 	}
 
