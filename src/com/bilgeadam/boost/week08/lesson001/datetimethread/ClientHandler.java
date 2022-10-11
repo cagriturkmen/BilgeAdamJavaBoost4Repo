@@ -18,7 +18,6 @@ public class ClientHandler extends Thread {
 	final Socket s;
 	
 	public ClientHandler(DataInputStream dis, DataOutputStream dos, Socket s) {
-		super();
 		this.dis = dis;
 		this.dos = dos;
 		this.s = s;
@@ -64,16 +63,17 @@ public class ClientHandler extends Thread {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		try {
-			dis.close();
-			dos.close();
-
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
-	
+		 try
+         {
+             // closing resources
+             this.dis.close();
+             this.dos.close();
+               
+         }catch(IOException e){
+             e.printStackTrace();
+         }
 	
 	}
 }

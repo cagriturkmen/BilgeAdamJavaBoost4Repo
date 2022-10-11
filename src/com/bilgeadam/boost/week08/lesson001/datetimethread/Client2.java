@@ -7,7 +7,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
-public class Client {
+public class Client2 {
 
 	public static void main(String[] args) throws UnknownHostException, IOException {
 	try {
@@ -21,7 +21,7 @@ public class Client {
 		DataOutputStream dos = new DataOutputStream(s.getOutputStream());
 			
 //bu döngünün içinde client ile client handler arasındaki bilgi alışverişini gerçekleştireceğim.
-		while(true) {
+		while(true) {	
 			
             System.out.println(dis.readUTF());
 			String toSend = scanner.nextLine();
@@ -44,8 +44,6 @@ public class Client {
 	} catch (Exception e) {
 		// TODO: handle exception
 		e.printStackTrace();
+	}		
 	}
-		
-	}
-
 }

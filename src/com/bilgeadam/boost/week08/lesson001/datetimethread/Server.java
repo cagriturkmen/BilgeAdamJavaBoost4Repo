@@ -11,22 +11,29 @@ public class Server {
 	public static void main(String[] args) throws IOException {
 		
 		//server 5056 portunu dinliyor.
-		ServerSocket ss = new ServerSocket(5056);
+		ServerSocket ss = new ServerSocket(5055);
 		//sunucu gelen istekleri her zaman kabul edecek durumda olmalı
 		//Bu yüzden istekleri sonsuz döngü içinde beklicez.
 		while(true) {
 			
 			Socket s = null;
+			try {
+				s = ss.accept();
+				
+				System.out.println("A new client is connected : "+ s);
+				
+				DataInputStream dis = new DataInputStream(s.getInputStream());
+				DataOutputStream dos = new DataOutputStream(s.getOutputStream());
+				
+				Thread t = new ClientHandler(dis, dos, s);
+				t.start();
+			} catch (Exception e) {
+				// TODO: handle exception
+				s.close();
+				e.printStackTrace();
+			}
 			//gelen client isteklerini almak için var
-			s = ss.accept();
 			
-			System.out.println("A new client is connected : "+ s);
-			
-			DataInputStream dis = new DataInputStream(s.getInputStream());
-			DataOutputStream dos = new DataOutputStream(s.getOutputStream());
-			
-			Thread t = new ClientHandler(dis, dos, s);
-			t.start();
 			
 		}
 		

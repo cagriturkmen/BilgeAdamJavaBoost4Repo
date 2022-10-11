@@ -3,7 +3,6 @@ package com.bilgeadam.boost.codility;
 public class YanyanaGelmeyenKarakterler {
 
 	public static void main(String[] args) {
-		
 		String s = "";
 		int[] arr ;
 	}
