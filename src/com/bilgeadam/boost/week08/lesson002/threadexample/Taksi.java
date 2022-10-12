@@ -35,7 +35,6 @@ public class Taksi implements Runnable {
 	@Override
 	public void run() {
 		while (!Durak.kuyruk.isEmpty()) {
-
 			int musteriNo = Durak.kuyruk.poll();
 			musteriNolari.add(musteriNo);
 			System.out.println(id + ".Taksi --> " + musteriNolari.size() + ".müsterisini aldı-->" + musteriNo);
